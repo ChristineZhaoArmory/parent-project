@@ -29,4 +29,3 @@ jobs:
         run: |
           echo "Post Deploy my-project"
           sleep 10s
-          exit 1
