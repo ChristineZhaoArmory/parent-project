@@ -18,7 +18,7 @@ jobs:
         run: |
           echo "Before Build my-project"
           sleep 10s
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+      - uses: convictional/trigger-workflow-and-wait@v1.6.3
         with:
           owner: ChristineZhaoArmory
           repo: my-project
