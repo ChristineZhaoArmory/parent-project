@@ -24,6 +24,7 @@ jobs:
           repo: my-project
           github_token: ${{ secrets.G_ACCESS_TOKEN }}
           workflow_file_name: ci.yml
+          ref: master
       - name: Post Deploy
         run: |
           echo "Post Deploy my-project"
