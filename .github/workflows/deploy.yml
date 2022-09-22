@@ -1,0 +1,25 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Run Web App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pre Build
+        run: |
+          echo "Before Build my-project"
+          sleep 10s
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: ChristineZhaoArmory
+          repo: my-project
+          github_token: ${{ secrets.G_ACCESS_TOKEN }}
+          workflow_file_name: ci.yml
+      - name: Post Deploy
+        run: |
+          echo "Post Deploy my-project"
+          sleep 10s
+          exit 1
